@@ -449,7 +449,7 @@
     "public.privacyWipeHelp": "Delete all your subscriptions and related data permanently.",
     "public.subConfirmed": "Subscribed successfully.",
     "public.subName": "Name (optional)",
-    "public.subOptinPending": "An e-mail has been sent to you to confirm your subscription(s).",
+    "public.subOptinPending": "We e-mailed you a link to confirm your subscription(s).",
     "public.subPrivateList": "Private list",
     "public.unsubFull": "Also block all future emails from this service.",
     "public.unsubHelp": "Do you want to unsubscribe from this mailing list?",
