@@ -836,7 +836,7 @@ func (a *App) processSubForm(c *echo.Context) (bool, error) {
 	req.Email = em
 
 	req.Name = strings.TrimSpace(req.Name)
-	if len(req.Name) == 0 {
+	if req.Name == "" {
 		// If there's no name, use the name bit from the e-mail.
 		req.Name = strings.Split(req.Email, "@")[0]
 	} else if len(req.Name) > stdInputMaxLen {
