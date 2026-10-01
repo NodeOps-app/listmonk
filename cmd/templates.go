@@ -123,7 +123,7 @@ func (a *App) GetTemplates(c *echo.Context) error {
 	noBody, _ := strconv.ParseBool(c.QueryParam("no_body"))
 
 	// Fetch templates from the DB.
-	out, err := a.core.GetTemplates(c.QueryParam("query"), models.TemplateTypeCampaign, noBody, c.QueryParam("order_by"), c.QueryParam("order"))
+	out, err := a.core.GetTemplates(c.QueryParam("query"), "", noBody, c.QueryParam("order_by"), c.QueryParam("order"))
 	if err != nil {
 		return err
 	}
