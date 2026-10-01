@@ -437,7 +437,7 @@
     "public.managePrefsUnsub": "Uncheck lists to unsubscribe from them.",
     "public.noListsAvailable": "No lists available to subscribe.",
     "public.noListsSelected": "No valid lists selected to subscribe.",
-    "public.noSubInfo": "There are no subscriptions to confirm.",
+    "public.noSubInfo": "You have no subscriptions to confirm.",
     "public.noSubTitle": "No subscriptions",
     "public.poweredBy": "Powered by",
     "public.prefsSaved": "Your preferences have been saved.",
