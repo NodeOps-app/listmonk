@@ -447,7 +447,7 @@
     "public.privacyTitle": "Privacy and data",
     "public.privacyWipe": "Wipe your data",
     "public.privacyWipeHelp": "Delete all your subscriptions and related data permanently.",
-    "public.subConfirmed": "Subscribed successfully.",
+    "public.subConfirmed": "You are now subscribed.",
     "public.subName": "Name (optional)",
     "public.subOptinPending": "An e-mail has been sent to you to confirm your subscription(s).",
     "public.subPrivateList": "Private list",
