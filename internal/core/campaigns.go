@@ -272,7 +272,7 @@ func (c *Core) UpdateCampaignStatus(id int, status string) (models.Campaign, err
 			errMsg = c.i18n.T("campaigns.onlyPausedDraft")
 		}
 	case models.CampaignStatusPaused:
-		if cm.Status != models.CampaignStatusRunning {
+		if cm.Status == models.CampaignStatusCancelled || cm.Status == models.CampaignStatusFinished {
 			errMsg = c.i18n.T("campaigns.onlyActivePause")
 		}
 	case models.CampaignStatusCancelled:
