@@ -662,7 +662,7 @@ func (im *Importer) ValidateFields(s SubReq) (SubReq, error) {
 	if err != nil {
 		return s, err
 	}
-	s.Email = strings.ToLower(em)
+	s.Email = em
 
 	// If there's no name, use the name part of the e-mail.
 	s.Name = strings.TrimSpace(s.Name)
