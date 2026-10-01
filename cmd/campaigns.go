@@ -848,7 +848,7 @@ func (a *App) validateCampaignFields(c campReq) (campReq, error) {
 	}
 
 	// Larger char limit for subject as it can contain {{ go templating }} logic.
-	if !strHasLen(c.Subject, 1, 5000) {
+	if !strHasLen(c.Subject, 0, 5000) {
 		return c, errors.New(a.i18n.T("campaigns.fieldInvalidSubject"))
 	}
 
