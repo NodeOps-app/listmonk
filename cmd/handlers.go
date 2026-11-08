@@ -354,6 +354,7 @@ func initHTTPHandlers(e *echo.Echo, a *App) {
 
 // HealthCheck is a healthcheck endpoint that returns a 200 response.
 func (a *App) HealthCheck(c *echo.Context) error {
+	c.Response().Header().Set("Cache-Control", "no-store")
 	return c.JSON(http.StatusOK, okResp{true})
 }
 
