@@ -136,7 +136,7 @@ func testTrackLinkCompile(t *testing.T, url, contentType string) {
 	}
 
 	tracked := `<a href="https://tracking.example/link">link</a>`
-	want := tracked + tracked
+	want := tracked + tracked + "!"
 	if contentType == CampaignContentTypeMarkdown {
 		want = tracked + "<p>" + tracked + "</p>\n"
 	}
