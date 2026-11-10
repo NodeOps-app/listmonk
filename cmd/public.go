@@ -207,7 +207,7 @@ func jsonForTpl(v any) template.JS {
 // required to submit a subscription.
 func (a *App) GetPublicLists(c *echo.Context) error {
 	// Get all public lists.
-	lists, err := a.core.GetLists(models.ListTypePublic, models.ListStatusActive, true, nil)
+	lists, err := a.core.GetLists("", models.ListStatusActive, true, nil)
 	if err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, a.i18n.T("public.errorFetchingLists"))
 	}
