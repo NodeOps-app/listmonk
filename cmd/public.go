@@ -203,6 +203,12 @@ func jsonForTpl(v any) template.JS {
 	return template.JS(b)
 }
 
+// publicList is the minimal list shape exposed to anonymous visitors.
+type publicList struct {
+	UUID string `json:"uuid"`
+	Name string `json:"name"`
+}
+
 // GetPublicLists returns the list of public lists with minimal fields
 // required to submit a subscription.
 func (a *App) GetPublicLists(c *echo.Context) error {
@@ -212,17 +218,9 @@ func (a *App) GetPublicLists(c *echo.Context) error {
 		return echo.NewHTTPError(http.StatusBadRequest, a.i18n.T("public.errorFetchingLists"))
 	}
 
-	type list struct {
-		UUID string `json:"uuid"`
-		Name string `json:"name"`
-	}
-
-	out := make([]list, 0, len(lists))
+	out := make([]publicList, 0, len(lists))
 	for _, l := range lists {
-		out = append(out, list{
-			UUID: l.UUID,
-			Name: l.Name,
-		})
+		out = append(out, publicList{UUID: l.UUID, Name: l.Name})
 	}
 
 	return c.JSON(http.StatusOK, out)
