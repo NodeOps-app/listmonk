@@ -56,7 +56,7 @@ type publicListForm struct {
 
 // GetLists retrieves lists with additional metadata like subscriber counts.
 func (a *App) GetLists(c *echo.Context) error {
-	lists, props, err := a.getLists(c)
+	items, props, err := a.getLists(c)
 	if err != nil {
 		return err
 	}
@@ -66,7 +66,7 @@ func (a *App) GetLists(c *echo.Context) error {
 	}
 
 	return c.JSON(http.StatusOK, okResp{models.PageResults{
-		Results:   lists,
+		Results:   items,
 		PageProps: props,
 	}})
 }
