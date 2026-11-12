@@ -2,6 +2,8 @@ module github.com/knadh/listmonk
 
 go 1.27.3
 
+// tester-poly: touch go.mod so the Go dependency scan runs
+
 require (
 	github.com/Masterminds/sprig/v3 v3.3.0
 	github.com/altcha-org/altcha-lib-go/v2 v2.4.1

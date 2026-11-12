@@ -1,7 +1,7 @@
 {{ define "subscriber-optin" }}
 {{ template "header" . }}
 <h2>{{ L.Ts "globals.buttons.confirmSubscription" }}</h2>
-<p>{{ L.Ts "email.optin.confirmSubWelcome" }} {{ .Subscriber.FirstName }}</p>
+<p>{{ L.Ts "email.optin.confirmSubWelcome" }} {{ .Subscriber.FirstName }},</p>
 <p>{{ L.Ts "public.confirmSubInfo" }}</p>
 <ul>
     {{ range $i, $l := .Lists }}
