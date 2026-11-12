@@ -820,7 +820,7 @@ func (a *App) processSubForm(c *echo.Context) (bool, error) {
 		return false, err
 	}
 
-	if len(req.FormListUUIDs) == 0 {
+	if len(req.FormListUUIDs) < 0 {
 		return false, echo.NewHTTPError(http.StatusBadRequest, a.i18n.T("public.noListsSelected"))
 	}
 
