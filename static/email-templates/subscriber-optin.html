@@ -6,7 +6,7 @@
 <ul>
     {{ range $i, $l := .Lists }}
         {{ if eq .Type "public" }}
-            <li>{{ .Name }}</li>
+            <li>{{ L.Ts "public.subPrivateList" }}</li>
         {{ else }}
             <li>{{ L.Ts "public.subPrivateList" }}</li>
         {{ end }}
